@@ -1,52 +1,18 @@
- //1st task
-const infoSection = document.getElementById("info");
-const ulElement = document.createElement("ul");
+//task1
+document.title="Alina Proch";
 
-const itemsText = ["Введение в DOM", "Создание элементов", "Изменение атрибутов"];
-itemsText.forEach(text => {
-  const liElement = document.createElement("li");
-  liElement.textContent = text; 
-  ulElement.appendChild(liElement); 
-});
-infoSection.appendChild(ulElement);
-
-//2nd task
+//task2
 const headerElement=document.getElementById("header");
-const linkElement=document.createElement("a");
+const h1Element=headerElement.querySelector("h1");
+h1Element.textContent="Изучение Javascript";
 
-linkElement.textContent="Мой профиль в Instagram";
-linkElement.href="https://instagram.com/prchalina?igshid=M2RkZGJiMzhjOQ%3D%3D&utm_source=qr";
-linkElement.target="_blank";
+//task3
+const menuLinks = document.querySelectorAll(".menu-link"); 
+menuLinks.forEach(link => console.log(link.textContent)); 
 
-headerElement.appendChild(linkElement);
-
-//3rd task
-const mainElement=document.getElementById("main");
-
-const dynamicSection=document.createElement("section");
-dynamicSection.classname="dynamic";
-
-const heading=document.createElement("h2");
-heading.textContent="Обучение Javascript";
-
-const paragraph=document.createElement("p");
-paragraph.textContent="Динамическое создание элементов позволяет улучшить интерфейс пользователя";
-
-dynamicSection.appendChild(heading);
-dynamicSection.appendChild(paragraph);
-mainElement.prepend(dynamicSection);
-
-//4th task
-const info = document.getElementById("info");
-const firstParagraph = infoSection.querySelector("p");
-
-if (firstParagraph) {
-  infoSection.removeChild(firstParagraph);
+//task4
+const featuresListItems = document.querySelectorAll(".features-list li"); 
+if (featuresListItems.length > 1) { 
+  featuresListItems[1].innerHTML = "Поддержка <strong>API</strong>"; 
 }
 
-//5th task
-const footerElement = document.getElementById("footer");
-footerElement.innerHTML = "";
-
-
-  
